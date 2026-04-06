@@ -33,7 +33,6 @@
             this.txtProducto = new System.Windows.Forms.TextBox();
             this.btnGuardar = new System.Windows.Forms.Button();
             this.lblProdCod = new System.Windows.Forms.Label();
-            this.txtCodigo = new System.Windows.Forms.TextBox();
             this.lblProdDesc = new System.Windows.Forms.Label();
             this.txtDescripcion = new System.Windows.Forms.TextBox();
             this.lblPrecio = new System.Windows.Forms.Label();
@@ -45,6 +44,8 @@
             this.btnModificar = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.gpbControles = new System.Windows.Forms.GroupBox();
+            this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
+            this.lblRegistroID = new System.Windows.Forms.Label();
             this.gpbControles.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -76,6 +77,7 @@
             this.btnGuardar.TabIndex = 6;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.UseVisualStyleBackColor = true;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // lblProdCod
             // 
@@ -86,15 +88,6 @@
             this.lblProdCod.Size = new System.Drawing.Size(59, 20);
             this.lblProdCod.TabIndex = 3;
             this.lblProdCod.Text = "Còdigo";
-            // 
-            // txtCodigo
-            // 
-            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCodigo.Location = new System.Drawing.Point(127, 25);
-            this.txtCodigo.Name = "txtCodigo";
-            this.txtCodigo.Size = new System.Drawing.Size(121, 26);
-            this.txtCodigo.TabIndex = 0;
             // 
             // lblProdDesc
             // 
@@ -194,6 +187,8 @@
             // 
             // gpbControles
             // 
+            this.gpbControles.Controls.Add(this.lblRegistroID);
+            this.gpbControles.Controls.Add(this.txtCodigo);
             this.gpbControles.Controls.Add(this.btnBorrar);
             this.gpbControles.Controls.Add(this.btnModificar);
             this.gpbControles.Controls.Add(this.lstCategoria);
@@ -204,18 +199,37 @@
             this.gpbControles.Controls.Add(this.lblPrecio);
             this.gpbControles.Controls.Add(this.txtDescripcion);
             this.gpbControles.Controls.Add(this.lblProdDesc);
-            this.gpbControles.Controls.Add(this.txtCodigo);
             this.gpbControles.Controls.Add(this.lblProdCod);
             this.gpbControles.Controls.Add(this.btnGuardar);
             this.gpbControles.Controls.Add(this.txtProducto);
             this.gpbControles.Controls.Add(this.lblProdName);
             this.gpbControles.Location = new System.Drawing.Point(69, 12);
             this.gpbControles.Name = "gpbControles";
-            this.gpbControles.Size = new System.Drawing.Size(420, 383);
+            this.gpbControles.Size = new System.Drawing.Size(420, 475);
             this.gpbControles.TabIndex = 0;
             this.gpbControles.TabStop = false;
             this.gpbControles.Text = "Controles";
             this.gpbControles.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtCodigo
+            // 
+            this.txtCodigo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCodigo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCodigo.Location = new System.Drawing.Point(127, 25);
+            this.txtCodigo.Mask = "00-000-0";
+            this.txtCodigo.Name = "txtCodigo";
+            this.txtCodigo.Size = new System.Drawing.Size(121, 26);
+            this.txtCodigo.TabIndex = 0;
+            // 
+            // lblRegistroID
+            // 
+            this.lblRegistroID.AutoSize = true;
+            this.lblRegistroID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistroID.Location = new System.Drawing.Point(27, 415);
+            this.lblRegistroID.Name = "lblRegistroID";
+            this.lblRegistroID.Size = new System.Drawing.Size(67, 25);
+            this.lblRegistroID.TabIndex = 13;
+            this.lblRegistroID.Text = "_____";
             // 
             // Form1
             // 
@@ -223,7 +237,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::prySanchezInventario.Properties.Resources.images;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(535, 452);
+            this.ClientSize = new System.Drawing.Size(535, 527);
             this.Controls.Add(this.gpbControles);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
@@ -241,7 +255,6 @@
         private System.Windows.Forms.TextBox txtProducto;
         private System.Windows.Forms.Button btnGuardar;
         private System.Windows.Forms.Label lblProdCod;
-        private System.Windows.Forms.TextBox txtCodigo;
         private System.Windows.Forms.Label lblProdDesc;
         private System.Windows.Forms.TextBox txtDescripcion;
         private System.Windows.Forms.Label lblPrecio;
@@ -253,6 +266,8 @@
         private System.Windows.Forms.Button btnModificar;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.GroupBox gpbControles;
+        private System.Windows.Forms.MaskedTextBox txtCodigo;
+        private System.Windows.Forms.Label lblRegistroID;
     }
 }
 

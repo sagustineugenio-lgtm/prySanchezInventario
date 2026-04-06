@@ -21,5 +21,10 @@ namespace prySanchezInventario
         {
 
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            lblRegistroID.Text = txtCodigo.Text + "/" + txtProducto.Text + "/" + "$" + txtPrecio.Text +"/" + txtStock.Text;
+        }
     }
 }
