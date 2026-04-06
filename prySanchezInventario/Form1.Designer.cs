@@ -46,6 +46,7 @@
             this.gpbControles = new System.Windows.Forms.GroupBox();
             this.txtCodigo = new System.Windows.Forms.MaskedTextBox();
             this.lblRegistroID = new System.Windows.Forms.Label();
+            this.lblRegistroVariables = new System.Windows.Forms.Label();
             this.gpbControles.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -187,6 +188,7 @@
             // 
             // gpbControles
             // 
+            this.gpbControles.Controls.Add(this.lblRegistroVariables);
             this.gpbControles.Controls.Add(this.lblRegistroID);
             this.gpbControles.Controls.Add(this.txtCodigo);
             this.gpbControles.Controls.Add(this.btnBorrar);
@@ -225,11 +227,21 @@
             // 
             this.lblRegistroID.AutoSize = true;
             this.lblRegistroID.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblRegistroID.Location = new System.Drawing.Point(27, 415);
+            this.lblRegistroID.Location = new System.Drawing.Point(25, 388);
             this.lblRegistroID.Name = "lblRegistroID";
             this.lblRegistroID.Size = new System.Drawing.Size(67, 25);
             this.lblRegistroID.TabIndex = 13;
             this.lblRegistroID.Text = "_____";
+            // 
+            // lblRegistroVariables
+            // 
+            this.lblRegistroVariables.AutoSize = true;
+            this.lblRegistroVariables.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblRegistroVariables.Location = new System.Drawing.Point(25, 434);
+            this.lblRegistroVariables.Name = "lblRegistroVariables";
+            this.lblRegistroVariables.Size = new System.Drawing.Size(67, 25);
+            this.lblRegistroVariables.TabIndex = 14;
+            this.lblRegistroVariables.Text = "_____";
             // 
             // Form1
             // 
@@ -268,6 +280,7 @@
         private System.Windows.Forms.GroupBox gpbControles;
         private System.Windows.Forms.MaskedTextBox txtCodigo;
         private System.Windows.Forms.Label lblRegistroID;
+        private System.Windows.Forms.Label lblRegistroVariables;
     }
 }
 

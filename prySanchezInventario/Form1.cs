@@ -31,12 +31,16 @@ namespace prySanchezInventario
         private void btnGuardar_Click(object sender, EventArgs e)
         {
             lblRegistroID.Text = txtCodigo.Text + "/" + txtProducto.Text + "/" + "$" + txtPrecio.Text +"/" + txtStock.Text;
+
                 varCodigo = txtCodigo.Text;
                 varProducto = txtProducto.Text;
                 varPrecio = Convert.ToInt32(txtPrecio.Text);
                 varStock = Convert.ToInt32(txtStock.Text);
                 varDescripcion = txtDescripcion.Text;
                 varCategoria = lstCategoria.Text;
+            lblRegistroVariables.Text = varCodigo + "/" + varProducto + "/" + "$" + varPrecio.ToString() + "/" + varStock.ToString() + "/" + varDescripcion + "/" + varCategoria;
+            string datoAgregado = varCodigo + "/" + varProducto + "/" + "$" + varPrecio.ToString() + "/" + varStock.ToString() + "/" + varDescripcion + "/" + varCategoria;
+            MessageBox.Show(datoAgregado);
         }
     }
 }
